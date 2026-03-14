@@ -610,6 +610,18 @@ img {
   transform: scale(1.1) rotate(5deg);
 }
 
+/* Imagen real del producto */
+.producto-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.producto-card:hover .producto-img-real {
+  transform: scale(1.05);
+}
+
 .producto-info {
   padding: 20px;
 }

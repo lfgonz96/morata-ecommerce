@@ -253,10 +253,20 @@ const initMetodosPago = () => {
     }
 
     const total = Carrito.obtenerTotal();
-    const numeroWA = '+5434444082459';
+    // Número secundario para pedidos del carrito: +54 9 3444 44-7269
+    const numeroWA = '5493444447269';
     const items = Carrito.obtenerItems();
-    const detalle = items.map(i => `• ${i.nombre} x${i.cantidad} (${i.tipo}): $${(i.precio * i.cantidad).toLocaleString('es-AR')}`).join('%0A');
-    const mensaje = `¡Hola MORATA! Quiero realizar un pedido:%0A%0A${detalle}%0A%0A*Total: $${total.toLocaleString('es-AR')}*%0A*Método de pago: ${metodoPagoSeleccionado}*`;
+
+    const detalle = items
+      .map(i => `- ${i.nombre} x${i.cantidad} (${i.tipo === 'mayorista' ? 'mayorista' : 'minorista'}) - $${(i.precio * i.cantidad).toLocaleString('es-AR')}`)
+      .join('%0A');
+
+    const mensaje =
+      `Hola!%20Estoy%20interesado%20en%20comprar%20los%20siguientes%20productos:%0A%0A` +
+      `${detalle}%0A%0A` +
+      `Total:%20$${total.toLocaleString('es-AR')}%0A` +
+      `M%C3%A9todo%20de%20pago:%20${encodeURIComponent(metodoPagoSeleccionado)}%0A%0A` +
+      `%C2%BFPodr%C3%ADan%20confirmarme%20disponibilidad%20y%20forma%20de%20env%C3%ADo%3F%20Gracias!`;
 
     window.open(`https://wa.me/${numeroWA}?text=${mensaje}`, '_blank');
     cerrarModalPago();

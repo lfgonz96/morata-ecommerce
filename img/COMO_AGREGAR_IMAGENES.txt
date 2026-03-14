@@ -1,0 +1,44 @@
+=====================================================
+  MORATA - GUÍA PARA AGREGAR IMÁGENES DE PRODUCTOS
+=====================================================
+
+Para agregar fotos reales a cada producto, copiá la
+imagen con el nombre exacto indicado en la carpeta
+correspondiente. El sitio las cargará automáticamente.
+
+Si la imagen no existe, se muestra el emoji del producto
+como fallback (sin errores visibles para el usuario).
+
+FORMATOS RECOMENDADOS: .jpg o .webp
+TAMAÑO RECOMENDADO: 800x800 px mínimo, cuadrada o 4:3
+
+-------------------------------------------------------
+CARTUCHERAS → carpeta: img/cartucheras/
+-------------------------------------------------------
+  cartuchera-flores.jpg     → Cartuchera Artesanal
+
+-------------------------------------------------------
+BOLSITOS DE TERMOS Y MATES → carpeta: img/bolsitos-termos/
+-------------------------------------------------------
+  bolsito-termo.jpg         → Bolsito para Termo
+  bolsito-mate.jpg          → Bolsito para Mate
+
+-------------------------------------------------------
+MATES → carpeta: img/mates/
+-------------------------------------------------------
+  mate-calabaza.jpg         → Mate Calabaza Natural
+  mate-torneado-madera.jpg  → Mate Torneado en Madera
+
+-------------------------------------------------------
+BOMBILLAS → carpeta: img/bombillas/
+-------------------------------------------------------
+  bombilla-acero-inox.jpg   → Bombilla de Acero Inox.
+  bombilla-alpaca.jpg       → Bombilla de Alpaca
+
+-------------------------------------------------------
+BOLSITOS → carpeta: img/bolsitos/
+-------------------------------------------------------
+  bolsito-multiusos.jpg     → Bolsito Multiusos
+  bolsito-grande.jpg        → Bolsito Grande Artesanal
+
+=====================================================

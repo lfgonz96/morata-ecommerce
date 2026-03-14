@@ -1,6 +1,14 @@
 /**
  * MORATA - Datos de Productos y Catálogo
+ * Gualeguay, Entre Ríos
  */
+
+// ============================================================
+// IMÁGENES: Para agregar fotos reales, copiá el archivo en la
+// ruta indicada en el campo `imagen` de cada producto.
+// La carpeta base es img/ dentro de E-COMMERCE/.
+// Si la imagen no existe, se muestra el emoji como fallback.
+// ============================================================
 
 const PRODUCTOS = [
   {
@@ -8,6 +16,8 @@ const PRODUCTOS = [
     nombre: 'Cartuchera Artesanal',
     descripcion: 'Cartuchera confeccionada a mano con telas seleccionadas. Ideal para estudio y trabajo. Variedad de colores y estampados.',
     emoji: '🎒',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/cartucheras/cartuchera-flores.jpg
+    imagen: 'img/cartucheras/cartuchera-flores.jpg',
     categoria: 'cartucheras',
     precioMayorista: 3500,
     precioMinorista: 5800,
@@ -18,8 +28,10 @@ const PRODUCTOS = [
   {
     id: 'bolsito-termo-001',
     nombre: 'Bolsito para Termo',
-    descripcion: 'Porta-termo artesanal con asa reforzada. Compatible con termos estándar. Diseños únicos hechos en Entre Ríos.',
+    descripcion: 'Porta-termo artesanal con asa reforzada. Compatible con termos estándar. Diseños únicos hechos en Gualeguay.',
     emoji: '🧴',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos-termos/bolsito-termo.jpg
+    imagen: 'img/bolsitos-termos/bolsito-termo.jpg',
     categoria: 'bolsitos-termos',
     precioMayorista: 4200,
     precioMinorista: 6900,
@@ -32,6 +44,8 @@ const PRODUCTOS = [
     nombre: 'Bolsito para Mate',
     descripcion: 'Porta-mate artesanal diseñado para proteger tu mate. Incluye bolsillo interior. Múltiples diseños disponibles.',
     emoji: '🫖',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos-termos/bolsito-mate.jpg
+    imagen: 'img/bolsitos-termos/bolsito-mate.jpg',
     categoria: 'bolsitos-termos',
     precioMayorista: 3800,
     precioMinorista: 6200,
@@ -42,8 +56,10 @@ const PRODUCTOS = [
   {
     id: 'mate-calabaza-001',
     nombre: 'Mate Calabaza Natural',
-    descripcion: 'Mate de calabaza curado artesanalmente. Listo para usar. Cada pieza es única, cultivada y trabajada en Entre Ríos.',
+    descripcion: 'Mate de calabaza curado artesanalmente. Listo para usar. Cada pieza es única, cultivada y trabajada en Gualeguay, Entre Ríos.',
     emoji: '🥢',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/mates/mate-calabaza.jpg
+    imagen: 'img/mates/mate-calabaza.jpg',
     categoria: 'mates',
     precioMayorista: 5500,
     precioMinorista: 9000,
@@ -56,6 +72,8 @@ const PRODUCTOS = [
     nombre: 'Mate Torneado en Madera',
     descripcion: 'Mate artesanal torneado en madera nativa. Terminación impecable, curado con aceite natural. Pieza de colección.',
     emoji: '🪵',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/mates/mate-torneado-madera.jpg
+    imagen: 'img/mates/mate-torneado-madera.jpg',
     categoria: 'mates',
     precioMayorista: 7200,
     precioMinorista: 12000,
@@ -68,6 +86,8 @@ const PRODUCTOS = [
     nombre: 'Bombilla de Acero Inox.',
     descripcion: 'Bombilla de acero inoxidable 316L, filtro tipo pala ancha. Higiénica y duradera. Ideal para todo tipo de mate.',
     emoji: '🥄',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bombillas/bombilla-acero-inox.jpg
+    imagen: 'img/bombillas/bombilla-acero-inox.jpg',
     categoria: 'bombillas',
     precioMayorista: 2200,
     precioMinorista: 3800,
@@ -80,6 +100,8 @@ const PRODUCTOS = [
     nombre: 'Bombilla de Alpaca',
     descripcion: 'Bombilla de alpaca con filtro espiral. Tradicional y elegante. Terminación artesanal pulida a mano.',
     emoji: '✨',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bombillas/bombilla-alpaca.jpg
+    imagen: 'img/bombillas/bombilla-alpaca.jpg',
     categoria: 'bombillas',
     precioMayorista: 3000,
     precioMinorista: 5000,
@@ -88,10 +110,12 @@ const PRODUCTOS = [
     destacado: false
   },
   {
-    id: 'bolsito-multipropósito-001',
+    id: 'bolsito-multiusos-001',
     nombre: 'Bolsito Multiusos',
     descripcion: 'Bolsito versátil con asa y cierre. Perfecto para cosméticos, accesorios o como mini cartera. Confección artesanal.',
     emoji: '👜',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos/bolsito-multiusos.jpg
+    imagen: 'img/bolsitos/bolsito-multiusos.jpg',
     categoria: 'bolsitos',
     precioMayorista: 3200,
     precioMinorista: 5300,
@@ -104,6 +128,8 @@ const PRODUCTOS = [
     nombre: 'Bolsito Grande Artesanal',
     descripcion: 'Bolsito amplio con correa ajustable. Ideal como cartera o bolso de mano. Diseños únicos en telas seleccionadas.',
     emoji: '🛍️',
+    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos/bolsito-grande.jpg
+    imagen: 'img/bolsitos/bolsito-grande.jpg',
     categoria: 'bolsitos',
     precioMayorista: 4500,
     precioMinorista: 7500,
@@ -126,7 +152,14 @@ const renderProductos = (filtro = 'todos', contenedorId = 'productos-grid') => {
     <div class="producto-card fade-in-up" style="animation-delay:${(i % 4) * 0.1}s">
       ${p.badge ? `<div class="producto-badge ${p.badge === 'Nuevo' ? 'nuevo' : ''}">${p.badge}</div>` : ''}
       <div class="producto-imagen">
-        <div class="producto-icon">${p.emoji}</div>
+        <!-- 📷 Imagen del producto: ${p.imagen} -->
+        <img
+          src="${p.imagen}"
+          alt="${p.nombre}"
+          class="producto-img-real"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="producto-icon" style="display:none">${p.emoji}</div>
       </div>
       <div class="producto-info">
         <div class="producto-nombre">${p.nombre}</div>
@@ -181,7 +214,8 @@ const initFormContacto = () => {
     const tipo = form.querySelector('#tipo').value;
 
     const texto = `¡Hola MORATA! Soy *${nombre}* 👋%0A%0A*Tipo:* ${tipo}%0A*Asunto:* ${asunto}%0A*Teléfono:* ${telefono}%0A%0A${mensaje}`;
-    window.open(`https://wa.me/5434444082459?text=${texto}`, '_blank');
+    // Número principal para consultas: +54 9 3444 40-8459
+    window.open(`https://wa.me/5493444408459?text=${texto}`, '_blank');
 
     mostrarToast('✓ ¡Mensaje enviado correctamente!', 'exito');
     form.reset();
