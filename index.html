@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MORATA - Tienda de productos artesanales de Entre Ríos. Cartucheras, bolsitos, mates y bombillas al por mayor y menor. Fabricación artesanal con identidad regional." />
+  <meta name="keywords" content="artesanías, Entre Ríos, mate, cartuchera, mayorista, bolsitos, bombilla" />
+  <title>MORATA | Artesanías de Entre Ríos - Mayorista y Minorista</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧉</text></svg>" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo-wrapper">
+      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Cuerpo del mate -->
+        <ellipse cx="50" cy="68" rx="28" ry="24" fill="#C1440E"/>
+        <ellipse cx="50" cy="68" rx="28" ry="24" fill="url(#mateGrad)"/>
+        <!-- Boca del mate -->
+        <rect x="38" y="42" width="24" height="8" rx="3" fill="#9A3509"/>
+        <!-- Bombilla -->
+        <rect x="52" y="22" width="4" height="30" rx="2" fill="#8B5E3C"/>
+        <ellipse cx="54" cy="20" rx="5" ry="3" fill="#8B5E3C"/>
+        <!-- Letra M -->
+        <text x="50" y="78" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#F5F0E8">M</text>
+        <!-- Gradiente -->
+        <defs>
+          <radialGradient id="mateGrad" cx="35%" cy="35%">
+            <stop offset="0%" stop-color="#E8622A" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#9A3509" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="logo-texto">
+        <span class="logo-nombre">MORATA</span>
+        <span class="logo-slogan">Artesanías del litoral</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="nav-acciones">
+      <button class="btn-carrito" id="btn-abrir-carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Carrito
+        <span class="carrito-badge" id="carrito-badge" style="display:none">0</span>
+      </button>
+      <button class="btn-menu" id="btn-menu" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="hero-contenido">
+      <div class="hero-badge">
+        📍 Entre Ríos · Buenos Aires
+      </div>
+      <h1 class="hero-titulo">
+        Artesanías con <span>alma</span> del litoral
+      </h1>
+      <p class="hero-descripcion">
+        Somos MORATA, una emprendimiento artesanal que elabora cartucheras, bolsitos, mates y bombillas con amor y dedicación. Vendemos al por mayor y menor directamente desde Entre Ríos.
+      </p>
+      <div class="hero-botones">
+        <a href="catalogo.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+          Ver catálogo
+        </a>
+        <a href="contacto.html" class="btn btn-secondary">Contactar mayorista</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-numero">+500</span>
+          <span class="stat-label">Clientes satisfechos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-numero">5</span>
+          <span class="stat-label">Líneas de productos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-numero">100%</span>
+          <span class="stat-label">Artesanal</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-mate-container">
+        <div class="hero-circulo">
+          <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mate grande decorativo -->
+            <ellipse cx="140" cy="190" rx="72" ry="62" fill="#C1440E"/>
+            <ellipse cx="140" cy="190" rx="72" ry="62" fill="url(#heroGrad)"/>
+            <!-- Cuello -->
+            <rect x="112" y="120" width="56" height="22" rx="8" fill="#9A3509"/>
+            <!-- Borde superior cuello -->
+            <rect x="106" y="114" width="68" height="12" rx="6" fill="#8B5E3C"/>
+            <!-- Bombilla -->
+            <rect x="152" y="48" width="8" height="82" rx="4" fill="#8B5E3C"/>
+            <ellipse cx="156" cy="44" rx="10" ry="6" fill="#7A4E2C"/>
+            <!-- Texto M grande -->
+            <text x="140" y="208" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="52" font-weight="900" fill="rgba(245,240,232,0.9)">M</text>
+            <!-- Brillo -->
+            <ellipse cx="112" cy="162" rx="18" ry="28" fill="rgba(255,255,255,0.12)" transform="rotate(-15 112 162)"/>
+            <!-- Detalles decorativos -->
+            <circle cx="60" cy="80" r="6" fill="rgba(193,68,14,0.3)"/>
+            <circle cx="220" cy="100" r="8" fill="rgba(193,68,14,0.2)"/>
+            <circle cx="40" cy="180" r="4" fill="rgba(139,94,60,0.4)"/>
+            <circle cx="240" cy="220" r="5" fill="rgba(139,94,60,0.3)"/>
+            <defs>
+              <radialGradient id="heroGrad" cx="30%" cy="30%">
+                <stop offset="0%" stop-color="#E8622A" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#7A2800" stop-opacity="0.2"/>
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BANNER MAYORISTA ===== -->
+<section class="mayorista-banner">
+  <div class="mayorista-inner">
+    <div>
+      <h2 class="mayorista-titulo">🏷️ ¿Sos revendedor o tenés un local?</h2>
+      <p class="mayorista-desc">Ofrecemos precios especiales para mayoristas. Consultá nuestras condiciones y ampliá tu negocio con productos artesanales únicos.</p>
+      <div class="mayorista-requisitos">
+        <div class="requisito-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+          Pedido mínimo por producto
+        </div>
+        <div class="requisito-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+          Envíos a todo el país
+        </div>
+        <div class="requisito-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+          Descuentos por volumen
+        </div>
+        <div class="requisito-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+          Atención personalizada
+        </div>
+      </div>
+    </div>
+    <div class="mayorista-accion">
+      <a href="https://wa.me/5434444082459?text=Hola%20MORATA%2C%20me%20interesa%20información%20sobre%20precios%20mayoristas" target="_blank" class="btn-whatsapp-mayorista">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Consultar mayoreo
+      </a>
+      <span style="font-size:0.78rem; opacity:0.65">Respuesta inmediata</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTOS DESTACADOS ===== -->
+<section class="productos-section" id="productos">
+  <div class="container">
+    <div class="seccion-titulo">
+      <h2 class="titulo-decorado">Productos destacados</h2>
+      <p>Nuestras creaciones artesanales más queridas, elaboradas con materiales de calidad y dedicación.</p>
+    </div>
+    <div class="filtros-bar">
+      <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+      <button class="filtro-btn" data-filtro="cartucheras">Cartucheras</button>
+      <button class="filtro-btn" data-filtro="bolsitos-termos">Bolsitos termo & mate</button>
+      <button class="filtro-btn" data-filtro="mates">Mates</button>
+      <button class="filtro-btn" data-filtro="bombillas">Bombillas</button>
+      <button class="filtro-btn" data-filtro="bolsitos">Bolsitos</button>
+    </div>
+    <div class="productos-grid" id="productos-grid"></div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="catalogo.html" class="btn btn-primary" style="font-size:1.05rem; padding:14px 36px;">
+        Ver catálogo completo →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARACTERÍSTICAS ===== -->
+<section class="caracteristicas-section">
+  <div class="container">
+    <div class="seccion-titulo">
+      <h2 class="titulo-decorado">¿Por qué elegirnos?</h2>
+      <p>Comprometidos con la calidad artesanal y el emprendimiento local.</p>
+    </div>
+    <div class="caracteristicas-grid">
+      <div class="caracteristica-card fade-in-up">
+        <div class="caracteristica-icono">🤝</div>
+        <h4>Trato directo</h4>
+        <p>Sin intermediarios. Comprás directo al fabricante y obtenés el mejor precio.</p>
+      </div>
+      <div class="caracteristica-card fade-in-up">
+        <div class="caracteristica-icono">✂️</div>
+        <h4>100% artesanal</h4>
+        <p>Cada pieza es confeccionada a mano con materiales cuidadosamente seleccionados.</p>
+      </div>
+      <div class="caracteristica-card fade-in-up">
+        <div class="caracteristica-icono">🚚</div>
+        <h4>Envíos a todo el país</h4>
+        <p>Despachamos por correo, transporte o encomienda. Consultar costos y plazos.</p>
+      </div>
+      <div class="caracteristica-card fade-in-up">
+        <div class="caracteristica-icono">🎨</div>
+        <h4>Diseños exclusivos</h4>
+        <p>Cada colección es única. Aceptamos pedidos personalizados con diseños especiales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIOS ===== -->
+<section class="testimonios-section">
+  <div class="container">
+    <div class="seccion-titulo">
+      <h2 class="titulo-decorado">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="testimonios-grid">
+      <div class="testimonio-card fade-in-up">
+        <div class="estrellas">★★★★★</div>
+        <p class="testimonio-texto">Compré los bolsitos para termo al por mayor para mi tienda y fueron un éxito total. La calidad es increíble y mis clientes los aman. ¡Volvería a comprar sin dudarlo!</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">👩</div>
+          <div>
+            <div class="autor-nombre">Marcela G.</div>
+            <div class="autor-loc">📍 Rosario, Santa Fe</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card fade-in-up">
+        <div class="estrellas">★★★★★</div>
+        <p class="testimonio-texto">Las cartucheras son preciosas, muy bien terminadas. Pedí 12 unidades para reventa y se vendieron en menos de una semana. Excelente atención por WhatsApp.</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">🧑</div>
+          <div>
+            <div class="autor-nombre">Pablo R.</div>
+            <div class="autor-loc">📍 Paraná, Entre Ríos</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio-card fade-in-up">
+        <div class="estrellas">★★★★★</div>
+        <p class="testimonio-texto">El mate de calabaza es una hermosura. Lo curan perfectamente y queda listo para tomar. Muy buena comunicación y despacho rápido. ¡Muy recomendados!</p>
+        <div class="testimonio-autor">
+          <div class="autor-avatar">👩</div>
+          <div>
+            <div class="autor-nombre">Florencia M.</div>
+            <div class="autor-loc">📍 Buenos Aires, CABA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="logo-wrapper footer-logo-texto">
+        <svg width="44" height="44" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="28" ry="24" fill="#C1440E"/>
+          <rect x="38" y="42" width="24" height="8" rx="3" fill="#9A3509"/>
+          <rect x="52" y="22" width="4" height="30" rx="2" fill="#8B5E3C"/>
+          <ellipse cx="54" cy="20" rx="5" ry="3" fill="#8B5E3C"/>
+          <text x="50" y="78" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#F5F0E8">M</text>
+        </svg>
+        <div class="logo-texto">
+          <span class="logo-nombre">MORATA</span>
+          <span class="logo-slogan">Artesanías del litoral</span>
+        </div>
+      </div>
+      <p class="footer-desc">Emprendimiento artesanal de Entre Ríos. Elaboramos cartucheras, bolsitos, mates y bombillas con materiales de calidad y dedicación artesanal desde el corazón del litoral argentino.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html#mayorista">Precios mayoristas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Productos</h4>
+      <ul class="footer-links">
+        <li><a href="catalogo.html">Cartucheras</a></li>
+        <li><a href="catalogo.html">Bolsitos de termos</a></li>
+        <li><a href="catalogo.html">Mates</a></li>
+        <li><a href="catalogo.html">Bombillas</a></li>
+        <li><a href="catalogo.html">Bolsitos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <div class="footer-contacto">
+        <div class="contacto-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Entre Ríos / Buenos Aires, Argentina
+        </div>
+        <div class="contacto-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          <div>
+            <a href="tel:+5434444084459">+54 3444-408459</a><br/>
+            <a href="tel:+5434444447269">+54 3444-447269</a>
+          </div>
+        </div>
+        <div class="contacto-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          morataartesanias@gmail.com
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 MORATA Artesanías. Todos los derechos reservados. Hecho con ❤️ en Entre Ríos, Argentina.</p>
+    <div class="footer-pagos">
+      <span class="pago-icon">💳 Tarjetas</span>
+      <span class="pago-icon" style="color:#009EE3; background:rgba(0,158,227,0.15);">MP</span>
+      <span class="pago-icon">🏦 Transfer.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CARRITO SIDEBAR ===== -->
+<div class="carrito-overlay" id="carrito-overlay"></div>
+<aside class="carrito-sidebar" id="carrito-sidebar">
+  <div class="carrito-header">
+    <h3>🛍️ Mi carrito</h3>
+    <button class="btn-cerrar-carrito" id="btn-cerrar-carrito">✕</button>
+  </div>
+  <div class="carrito-items" id="carrito-items">
+    <div class="carrito-vacio" id="carrito-vacio">
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <p>Tu carrito está vacío</p>
+      <a href="catalogo.html" class="btn btn-primary" style="padding:10px 24px; font-size:0.9rem;">Ver productos</a>
+    </div>
+  </div>
+  <div class="carrito-footer">
+    <div class="carrito-subtotal">
+      <span>Subtotal</span>
+      <span id="carrito-subtotal-valor">$ 0</span>
+    </div>
+    <div class="carrito-total">
+      <span>Total</span>
+      <span id="carrito-total-valor">$ 0</span>
+    </div>
+    <div class="pago-opciones">
+      <p>Métodos de pago aceptados</p>
+      <div class="metodos-pago">
+        <div class="metodo-pago-badge">💳 Tarjetas</div>
+        <div class="metodo-pago-badge" style="color:#009EE3;">🔵 Mercado Pago</div>
+        <div class="metodo-pago-badge">🏦 Transferencia</div>
+      </div>
+    </div>
+    <button class="btn-checkout" id="btn-checkout">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+        <polyline points="20,6 9,17 4,12"/>
+      </svg>
+      Finalizar pedido
+    </button>
+  </div>
+</aside>
+
+<!-- ===== MODAL PAGO ===== -->
+<div class="modal-overlay" id="modal-pago">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>💳 Elegí cómo pagar</h3>
+      <button class="btn-cerrar-modal" id="btn-cerrar-modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="mp-logo-container">
+        <div class="mp-logo">🔵 Mercado Pago</div>
+        <div class="mp-subtitle">Pagá con total seguridad</div>
+      </div>
+      <div class="metodos-grid">
+        <button class="metodo-btn" data-metodo="Mercado Pago">
+          <svg viewBox="0 0 24 24" fill="#009EE3"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="white" font-weight="bold">MP</text></svg>
+          Mercado Pago
+        </button>
+        <button class="metodo-btn" data-metodo="Tarjeta de crédito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Tarjeta crédito
+        </button>
+        <button class="metodo-btn" data-metodo="Tarjeta de débito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/><line x1="5" y1="15" x2="9" y2="15"/></svg>
+          Tarjeta débito
+        </button>
+        <button class="metodo-btn" data-metodo="Transferencia bancaria">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg>
+          Transferencia
+        </button>
+      </div>
+      <div class="resumen-pago">
+        <div class="resumen-fila">
+          <span>Productos</span>
+          <span id="resumen-items">0 productos</span>
+        </div>
+        <div class="resumen-fila total">
+          <span>Total a pagar</span>
+          <span id="resumen-total">$ 0</span>
+        </div>
+      </div>
+      <div class="seguridad-info">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span>Tu información de pago está protegida con encriptación SSL. Procesamos pagos a través de Mercado Pago.</span>
+      </div>
+      <button class="btn-checkout" id="btn-pagar">
+        Confirmar y pagar por WhatsApp
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-left:4px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </button>
+      <p style="text-align:center; font-size:0.78rem; color:var(--texto-claro); margin-top:14px;">Al confirmar, serás redirigido a WhatsApp para coordinar tu pago.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHATSAPP FLOTANTE ===== -->
+<div class="whatsapp-flotante">
+  <div class="whatsapp-numeros" id="wa-numeros">
+    <a href="https://wa.me/5434444082459?text=Hola%20MORATA%2C%20quiero%20consultar%20sobre%20sus%20productos" target="_blank" class="whatsapp-numero-btn">
+      <span class="wa-dot"></span>
+      +54 3444-408459
+    </a>
+    <a href="https://wa.me/5434444447269?text=Hola%20MORATA%2C%20quiero%20consultar%20sobre%20sus%20productos" target="_blank" class="whatsapp-numero-btn">
+      <span class="wa-dot"></span>
+      +54 3444-447269
+    </a>
+  </div>
+  <button class="whatsapp-btn-principal" id="wa-btn-principal" title="Contactar por WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </button>
+</div>
+
+<script src="js/carrito.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacto MORATA - Comunicáte con nosotros por WhatsApp, teléfono o formulario. Consultas mayoristas y minoristas." />
+  <title>Contacto | MORATA Artesanías</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧉</text></svg>" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo-wrapper">
+      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="68" rx="28" ry="24" fill="#C1440E"/>
+        <ellipse cx="50" cy="68" rx="28" ry="24" fill="url(#mateGrad3)"/>
+        <rect x="38" y="42" width="24" height="8" rx="3" fill="#9A3509"/>
+        <rect x="52" y="22" width="4" height="30" rx="2" fill="#8B5E3C"/>
+        <ellipse cx="54" cy="20" rx="5" ry="3" fill="#8B5E3C"/>
+        <text x="50" y="78" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#F5F0E8">M</text>
+        <defs>
+          <radialGradient id="mateGrad3" cx="35%" cy="35%">
+            <stop offset="0%" stop-color="#E8622A" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#9A3509" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+      </svg>
+      <div class="logo-texto">
+        <span class="logo-nombre">MORATA</span>
+        <span class="logo-slogan">Artesanías del litoral</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+    </ul>
+
+    <div class="nav-acciones">
+      <button class="btn-carrito" id="btn-abrir-carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Carrito
+        <span class="carrito-badge" id="carrito-badge" style="display:none">0</span>
+      </button>
+      <button class="btn-menu" id="btn-menu" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO CONTACTO ===== -->
+<section class="contacto-hero">
+  <div class="hero-badge" style="display:inline-flex; margin-bottom:20px;">
+    💬 Estamos para ayudarte
+  </div>
+  <h1>Contacto</h1>
+  <p>Escribinos por WhatsApp, completá el formulario o llamanos. Respondemos a la brevedad.</p>
+</section>
+
+<!-- ===== BOTONES WHATSAPP DIRECTOS ===== -->
+<section style="background:var(--crema); padding:40px 20px;">
+  <div style="max-width:700px; margin:0 auto; text-align:center;">
+    <h3 style="color:var(--marron); margin-bottom:8px;">Contacto directo por WhatsApp</h3>
+    <p style="color:var(--texto-claro); margin-bottom:28px;">La forma más rápida de comunicarse. Respondemos todos los días.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="https://wa.me/5434444082459?text=Hola%20MORATA%2C%20quiero%20hacer%20una%20consulta" target="_blank"
+         style="display:flex; align-items:center; gap:12px; background:#25D366; color:white; padding:16px 28px; border-radius:14px; font-weight:700; font-size:1rem; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,0.35); transition:all 0.3s;"
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 30px rgba(37,211,102,0.5)';"
+         onmouseout="this.style.transform=''; this.style.boxShadow='0 4px 20px rgba(37,211,102,0.35)';">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        +54 3444-408459
+      </a>
+      <a href="https://wa.me/5434444447269?text=Hola%20MORATA%2C%20quiero%20hacer%20una%20consulta" target="_blank"
+         style="display:flex; align-items:center; gap:12px; background:#25D366; color:white; padding:16px 28px; border-radius:14px; font-weight:700; font-size:1rem; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,0.35); transition:all 0.3s;"
+         onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 30px rgba(37,211,102,0.5)';"
+         onmouseout="this.style.transform=''; this.style.boxShadow='0 4px 20px rgba(37,211,102,0.35)';">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        +54 3444-447269
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN CONTACTO ===== -->
+<section class="contacto-section">
+  <div class="contacto-grid">
+
+    <!-- INFO -->
+    <div class="contacto-info">
+      <h3>Información de contacto</h3>
+      <p>Somos un emprendimiento familiar de Entre Ríos. Nos apasiona crear y compartir nuestras artesanías con todo el país. No dudes en escribirnos.</p>
+
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="info-texto">
+            <h4>Ubicación</h4>
+            <p>Entre Ríos / Buenos Aires<br>Argentina</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+          </div>
+          <div class="info-texto">
+            <h4>Teléfonos / WhatsApp</h4>
+            <a href="tel:+5434444082459">+54 3444-408459</a><br/>
+            <a href="tel:+5434444447269">+54 3444-447269</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="info-texto">
+            <h4>Email</h4>
+            <a href="mailto:morataartesanias@gmail.com">morataartesanias@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <div class="info-texto">
+            <h4>Horario de atención</h4>
+            <p>Lunes a Sábado: 9:00 a 20:00 hs<br>Domingos: Consultar</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info mayoristas -->
+      <div id="mayorista" style="margin-top:36px; background:linear-gradient(135deg, var(--marron), var(--marron-claro)); border-radius:16px; padding:28px; color:white;">
+        <h4 style="font-size:1.1rem; margin-bottom:10px;">🏷️ Condiciones Mayoristas</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.88rem; opacity:0.9;">
+          <li>✓ Cartucheras y bolsitos: mínimo 6 unidades</li>
+          <li>✓ Mates: mínimo 4 unidades</li>
+          <li>✓ Bombillas: mínimo 12 unidades</li>
+          <li>✓ Pedidos mixtos: consultar condiciones</li>
+          <li>✓ Descuentos por volumen mayor</li>
+          <li>✓ Envíos por correo, transporte o encomienda</li>
+          <li>✓ Pago: transferencia, Mercado Pago o tarjetas</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="formulario-contacto">
+      <h3>Envianos tu consulta</h3>
+      <form id="form-contacto">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 11 ..." />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo de consulta *</label>
+          <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Consulta mayorista">Consulta mayorista</option>
+            <option value="Consulta minorista">Consulta minorista</option>
+            <option value="Pedido personalizado">Pedido personalizado</option>
+            <option value="Información sobre envíos">Información sobre envíos</option>
+            <option value="Otra consulta">Otra consulta</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="asunto">Asunto *</label>
+          <input type="text" id="asunto" name="asunto" placeholder="¿En qué te podemos ayudar?" required />
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Contanos tu consulta, qué productos te interesan, cantidades, etc." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          Enviar por WhatsApp
+        </button>
+        <p style="text-align:center; font-size:0.78rem; color:var(--texto-claro); margin-top:12px;">Al enviar, serás redirigido a WhatsApp con tu mensaje ya cargado.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÉTODOS DE PAGO ===== -->
+<section style="background:var(--crema); padding:80px 20px;">
+  <div style="max-width:900px; margin:0 auto; text-align:center;">
+    <h2 style="color:var(--marron); margin-bottom:12px; font-size:2rem;">Métodos de pago aceptados</h2>
+    <p style="color:var(--texto-claro); margin-bottom:48px;">Ofrecemos múltiples formas de pago para tu comodidad.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
+      <div style="background:white; border-radius:16px; padding:28px; box-shadow:0 4px 20px var(--sombra); text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px;">💳</div>
+        <h4 style="color:var(--marron); margin-bottom:8px;">Tarjetas</h4>
+        <p style="font-size:0.85rem; color:var(--texto-claro);">Visa, Mastercard, American Express. Crédito y débito. Cuotas sin interés disponibles.</p>
+      </div>
+      <div style="background:white; border-radius:16px; padding:28px; box-shadow:0 4px 20px var(--sombra); text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px; color:#009EE3;">🔵</div>
+        <h4 style="color:var(--marron); margin-bottom:8px;">Mercado Pago</h4>
+        <p style="font-size:0.85rem; color:var(--texto-claro);">Pagá con tu saldo de Mercado Pago, dinero en cuenta o QR. Seguro y rápido.</p>
+      </div>
+      <div style="background:white; border-radius:16px; padding:28px; box-shadow:0 4px 20px var(--sombra); text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px;">🏦</div>
+        <h4 style="color:var(--marron); margin-bottom:8px;">Transferencia</h4>
+        <p style="font-size:0.85rem; color:var(--texto-claro);">Transferencia bancaria o CVU. Pedí el CBU/CVU por WhatsApp al momento de comprar.</p>
+      </div>
+      <div style="background:white; border-radius:16px; padding:28px; box-shadow:0 4px 20px var(--sombra); text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:12px;">💵</div>
+        <h4 style="color:var(--marron); margin-bottom:8px;">Efectivo</h4>
+        <p style="font-size:0.85rem; color:var(--texto-claro);">Pago en efectivo para retiros en mano. Consultá disponibilidad en tu zona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="logo-wrapper footer-logo-texto">
+        <svg width="44" height="44" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="28" ry="24" fill="#C1440E"/>
+          <rect x="38" y="42" width="24" height="8" rx="3" fill="#9A3509"/>
+          <rect x="52" y="22" width="4" height="30" rx="2" fill="#8B5E3C"/>
+          <ellipse cx="54" cy="20" rx="5" ry="3" fill="#8B5E3C"/>
+          <text x="50" y="78" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#F5F0E8">M</text>
+        </svg>
+        <div class="logo-texto">
+          <span class="logo-nombre">MORATA</span>
+          <span class="logo-slogan">Artesanías del litoral</span>
+        </div>
+      </div>
+      <p class="footer-desc">Emprendimiento artesanal de Entre Ríos. Elaboramos cartucheras, bolsitos, mates y bombillas con materiales de calidad.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Productos</h4>
+      <ul class="footer-links">
+        <li><a href="catalogo.html">Cartucheras</a></li>
+        <li><a href="catalogo.html">Bolsitos</a></li>
+        <li><a href="catalogo.html">Mates</a></li>
+        <li><a href="catalogo.html">Bombillas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <div class="footer-contacto">
+        <div class="contacto-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;color:var(--terracota-claro)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Entre Ríos / Buenos Aires, Argentina
+        </div>
+        <div class="contacto-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;color:var(--terracota-claro)"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          +54 3444-408459 / 447269
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 MORATA Artesanías. Todos los derechos reservados. Hecho con ❤️ en Entre Ríos, Argentina.</p>
+    <div class="footer-pagos">
+      <span class="pago-icon">💳 Tarjetas</span>
+      <span class="pago-icon" style="color:#009EE3; background:rgba(0,158,227,0.15);">MP</span>
+      <span class="pago-icon">🏦 Transfer.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CARRITO ===== -->
+<div class="carrito-overlay" id="carrito-overlay"></div>
+<aside class="carrito-sidebar" id="carrito-sidebar">
+  <div class="carrito-header">
+    <h3>🛍️ Mi carrito</h3>
+    <button class="btn-cerrar-carrito" id="btn-cerrar-carrito">✕</button>
+  </div>
+  <div class="carrito-items" id="carrito-items">
+    <div class="carrito-vacio" id="carrito-vacio">
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <p>Tu carrito está vacío</p>
+    </div>
+  </div>
+  <div class="carrito-footer">
+    <div class="carrito-subtotal">
+      <span>Subtotal</span>
+      <span id="carrito-subtotal-valor">$ 0</span>
+    </div>
+    <div class="carrito-total">
+      <span>Total</span>
+      <span id="carrito-total-valor">$ 0</span>
+    </div>
+    <div class="pago-opciones">
+      <p>Métodos de pago aceptados</p>
+      <div class="metodos-pago">
+        <div class="metodo-pago-badge">💳 Tarjetas</div>
+        <div class="metodo-pago-badge" style="color:#009EE3;">🔵 Mercado Pago</div>
+        <div class="metodo-pago-badge">🏦 Transferencia</div>
+      </div>
+    </div>
+    <button class="btn-checkout" id="btn-checkout">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20,6 9,17 4,12"/></svg>
+      Finalizar pedido
+    </button>
+  </div>
+</aside>
+
+<!-- ===== MODAL PAGO ===== -->
+<div class="modal-overlay" id="modal-pago">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>💳 Elegí cómo pagar</h3>
+      <button class="btn-cerrar-modal" id="btn-cerrar-modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="mp-logo-container">
+        <div class="mp-logo">🔵 Mercado Pago</div>
+        <div class="mp-subtitle">Pagá con total seguridad</div>
+      </div>
+      <div class="metodos-grid">
+        <button class="metodo-btn" data-metodo="Mercado Pago">
+          <svg viewBox="0 0 24 24" fill="#009EE3"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="10" fill="white" font-weight="bold">MP</text></svg>
+          Mercado Pago
+        </button>
+        <button class="metodo-btn" data-metodo="Tarjeta de crédito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Tarjeta crédito
+        </button>
+        <button class="metodo-btn" data-metodo="Tarjeta de débito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/><line x1="5" y1="15" x2="9" y2="15"/></svg>
+          Tarjeta débito
+        </button>
+        <button class="metodo-btn" data-metodo="Transferencia bancaria">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg>
+          Transferencia
+        </button>
+      </div>
+      <div class="resumen-pago">
+        <div class="resumen-fila">
+          <span>Productos</span>
+          <span id="resumen-items">0 productos</span>
+        </div>
+        <div class="resumen-fila total">
+          <span>Total a pagar</span>
+          <span id="resumen-total">$ 0</span>
+        </div>
+      </div>
+      <div class="seguridad-info">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Pago seguro vía Mercado Pago con encriptación SSL.</span>
+      </div>
+      <button class="btn-checkout" id="btn-pagar">Confirmar y pagar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHATSAPP ===== -->
+<div class="whatsapp-flotante">
+  <div class="whatsapp-numeros" id="wa-numeros">
+    <a href="https://wa.me/5434444082459?text=Hola%20MORATA%2C%20quiero%20hacer%20una%20consulta" target="_blank" class="whatsapp-numero-btn">
+      <span class="wa-dot"></span> +54 3444-408459
+    </a>
+    <a href="https://wa.me/5434444447269?text=Hola%20MORATA%2C%20quiero%20hacer%20una%20consulta" target="_blank" class="whatsapp-numero-btn">
+      <span class="wa-dot"></span> +54 3444-447269
+    </a>
+  </div>
+  <button class="whatsapp-btn-principal" id="wa-btn-principal" title="WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
+
+<script src="js/carrito.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
