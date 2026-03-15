@@ -18,11 +18,12 @@ const PRODUCTOS = [
 
   // ─────────────────────────────────────────────
   //  CARTUCHERAS
+  //  6 variantes reales — fotos en img/cartucheras/
   // ─────────────────────────────────────────────
   {
     id: 'cartuchera-001',
     nombre: 'Cartuchera Artesanal',
-    descripcion: 'Cartuchera confeccionada a mano con telas seleccionadas. Ideal para estudio y trabajo.',
+    descripcion: 'Cartuchera confeccionada a mano con telas seleccionadas. Ideal para estudio y trabajo. Disponible en 6 diseños.',
     emoji: '🎒',
     categoria: 'cartucheras',
     precioMayorista: 3500,
@@ -30,42 +31,72 @@ const PRODUCTOS = [
     minMayorista: 6,
     badge: null,
     destacado: true,
-    // ── VARIANTES DE COLOR ──
-    // Agregá las fotos de cada variante en las rutas indicadas.
-    // Podés agregar o quitar variantes según los colores que tengas disponibles.
     variantes: [
       {
-        nombre: 'Multicolor',
-        color: '#C8608A',
-        // 📷 Fotos de la variante "Multicolor":
+        nombre: 'Rosa',
+        color: '#D4789A',
+        // 📷 Carpeta origen: "1- CART ROSA"
+        // Copiá las fotos como: img/cartucheras/rosa-1.jpg, rosa-2.jpg ...
         images: [
-          'img/cartucheras/multicolor-1.jpg',  // vista frontal
-          'img/cartucheras/multicolor-2.jpg',  // vista abierta
-          'img/cartucheras/multicolor-3.jpg',  // detalle cierre
+          'img/cartucheras/rosa-1.jpg',
+          'img/cartucheras/rosa-2.jpg',
+          'img/cartucheras/rosa-3.jpg',
+          'img/cartucheras/rosa-4.jpg',
         ]
       },
       {
-        nombre: 'Azul',
-        color: '#4A7FB5',
+        nombre: 'Rosita',
+        color: '#F2B5C9',
+        // 📷 Carpeta origen: "2- CART ROSITA"
         images: [
-          'img/cartucheras/azul-1.jpg',
-          'img/cartucheras/azul-2.jpg',
+          'img/cartucheras/rosita-1.jpg',
+          'img/cartucheras/rosita-2.jpg',
+          'img/cartucheras/rosita-3.jpg',
+          'img/cartucheras/rosita-4.jpg',
         ]
       },
       {
-        nombre: 'Verde',
-        color: '#5E9E6B',
+        nombre: 'Blanca',
+        color: '#EDE8DF',
+        // 📷 Carpeta origen: "3- CART BLANCA"
         images: [
-          'img/cartucheras/verde-1.jpg',
-          'img/cartucheras/verde-2.jpg',
+          'img/cartucheras/blanca-1.jpg',
+          'img/cartucheras/blanca-2.jpg',
+          'img/cartucheras/blanca-3.jpg',
+          'img/cartucheras/blanca-4.jpg',
         ]
       },
       {
-        nombre: 'Natural',
+        nombre: 'Blanca y Verde',
+        color: '#8FBC8F',
+        // 📷 Carpeta origen: "4- CART BLANCA Y VERD"
+        images: [
+          'img/cartucheras/blanca-verde-1.jpg',
+          'img/cartucheras/blanca-verde-2.jpg',
+          'img/cartucheras/blanca-verde-3.jpg',
+          'img/cartucheras/blanca-verde-4.jpg',
+        ]
+      },
+      {
+        nombre: 'Colores',
+        color: '#C1440E',
+        // 📷 Carpeta origen: "5- CART COLORES"
+        images: [
+          'img/cartucheras/colores-1.jpg',
+          'img/cartucheras/colores-2.jpg',
+          'img/cartucheras/colores-3.jpg',
+          'img/cartucheras/colores-4.jpg',
+        ]
+      },
+      {
+        nombre: 'Simples',
         color: '#C8A96E',
+        // 📷 Carpeta origen: "6- CART SIMPLES"
         images: [
-          'img/cartucheras/natural-1.jpg',
-          'img/cartucheras/natural-2.jpg',
+          'img/cartucheras/simples-1.jpg',
+          'img/cartucheras/simples-2.jpg',
+          'img/cartucheras/simples-3.jpg',
+          'img/cartucheras/simples-4.jpg',
         ]
       },
     ]
@@ -316,6 +347,30 @@ const PRODUCTOS = [
           'img/bolsitos/grande-verde-2.jpg',
         ]
       },
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  //  YERBEROS
+  //  📷 Carpeta origen: "7- YERBEROS"
+  //  Copiá las fotos como: img/yerberos/yerbero-1.jpg, yerbero-2.jpg ...
+  // ─────────────────────────────────────────────
+  {
+    id: 'yerbero-001',
+    nombre: 'Yerbero Artesanal',
+    descripcion: 'Yerbero confeccionado a mano, ideal para guardar y transportar la yerba. Diseño práctico y estético. Producto estrella de MORATA.',
+    emoji: '🌿',
+    categoria: 'yerberos',
+    precioMayorista: 3800,
+    precioMinorista: 6200,
+    minMayorista: 6,
+    badge: 'Nuevo',
+    destacado: true,
+    images: [
+      'img/yerberos/yerbero-1.jpg',
+      'img/yerberos/yerbero-2.jpg',
+      'img/yerberos/yerbero-3.jpg',
+      'img/yerberos/yerbero-4.jpg',
     ]
   }
 ];
