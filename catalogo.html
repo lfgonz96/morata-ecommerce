@@ -342,51 +342,13 @@
 <script src="js/carrito.js"></script>
 <script src="js/main.js"></script>
 <script>
-// Render por categorías en catálogo
+// renderCategoria está definida en main.js — reutiliza el mismo renderCard con galería y variantes
 document.addEventListener('DOMContentLoaded', () => {
-  const renderCategoria = (filtro, gridId) => {
-    const contenedor = document.getElementById(gridId);
-    if (!contenedor) return;
-    const items = PRODUCTOS.filter(p => p.categoria === filtro);
-    contenedor.innerHTML = items.map((p, i) => `
-      <div class="producto-card fade-in-up" style="animation-delay:${i * 0.1}s">
-        ${p.badge ? `<div class="producto-badge ${p.badge === 'Nuevo' ? 'nuevo' : ''}">${p.badge}</div>` : ''}
-        <div class="producto-imagen">
-          <div class="producto-icon">${p.emoji}</div>
-        </div>
-        <div class="producto-info">
-          <div class="producto-nombre">${p.nombre}</div>
-          <div class="producto-descripcion">${p.descripcion}</div>
-          <div class="precios-container">
-            <div class="precio-row">
-              <span class="precio-tipo mayorista">🏷️ Mayorista</span>
-              <span class="precio-valor">$ ${p.precioMayorista.toLocaleString('es-AR')}</span>
-            </div>
-            <div class="precio-row">
-              <span class="precio-tipo minorista">🛍️ Minorista</span>
-              <span class="precio-valor">$ ${p.precioMinorista.toLocaleString('es-AR')}</span>
-            </div>
-            <div class="precio-minimo">Mayorista: mínimo ${p.minMayorista} unidades</div>
-          </div>
-          <div class="producto-acciones">
-            <button class="btn-agregar" onclick='Carrito.agregar(${JSON.stringify(p).replace(/'/g, "\\'")}, "minorista")'>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              Agregar
-            </button>
-            <button class="btn-mayorista-producto" onclick='Carrito.agregar(${JSON.stringify(p).replace(/'/g, "\\'")}, "mayorista")'>
-              🏷️ Mayor.
-            </button>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  };
-
-  renderCategoria('cartucheras', 'grid-cartucheras');
-  renderCategoria('bolsitos-termos', 'grid-termos');
-  renderCategoria('mates', 'grid-mates');
-  renderCategoria('bombillas', 'grid-bombillas');
-  renderCategoria('bolsitos', 'grid-bolsitos');
+  renderCategoria('cartucheras',    'grid-cartucheras');
+  renderCategoria('bolsitos-termos','grid-termos');
+  renderCategoria('mates',          'grid-mates');
+  renderCategoria('bombillas',      'grid-bombillas');
+  renderCategoria('bolsitos',       'grid-bolsitos');
 });
 </script>
 </body>

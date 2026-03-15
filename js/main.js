@@ -1,168 +1,486 @@
 /**
- * MORATA - Datos de Productos y Catálogo
+ * MORATA - Datos de Productos, Galería y Catálogo
  * Gualeguay, Entre Ríos
+ *
+ * ESTRUCTURA DE IMÁGENES:
+ * ─ Productos con variantes de color: campo `variantes[]`
+ *   Cada variante tiene `nombre`, `color` (hex) e `images[]` (rutas de fotos)
+ * ─ Productos sin variantes de color: campo `images[]` directamente
+ *   (galería de ángulos/detalles, sin selector de color)
+ * ─ Si no hay imágenes o no cargan, se muestra el emoji como fallback.
+ *
+ * PARA AGREGAR FOTOS REALES:
+ *   Copiá cada imagen en la ruta indicada. El nombre debe coincidir exactamente.
+ *   Carpeta base: img/  dentro de E-COMMERCE/
  */
 
-// ============================================================
-// IMÁGENES: Para agregar fotos reales, copiá el archivo en la
-// ruta indicada en el campo `imagen` de cada producto.
-// La carpeta base es img/ dentro de E-COMMERCE/.
-// Si la imagen no existe, se muestra el emoji como fallback.
-// ============================================================
-
 const PRODUCTOS = [
+
+  // ─────────────────────────────────────────────
+  //  CARTUCHERAS
+  // ─────────────────────────────────────────────
   {
     id: 'cartuchera-001',
     nombre: 'Cartuchera Artesanal',
-    descripcion: 'Cartuchera confeccionada a mano con telas seleccionadas. Ideal para estudio y trabajo. Variedad de colores y estampados.',
+    descripcion: 'Cartuchera confeccionada a mano con telas seleccionadas. Ideal para estudio y trabajo.',
     emoji: '🎒',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/cartucheras/cartuchera-flores.jpg
-    imagen: 'img/cartucheras/cartuchera-flores.jpg',
     categoria: 'cartucheras',
     precioMayorista: 3500,
     precioMinorista: 5800,
     minMayorista: 6,
     badge: null,
-    destacado: true
+    destacado: true,
+    // ── VARIANTES DE COLOR ──
+    // Agregá las fotos de cada variante en las rutas indicadas.
+    // Podés agregar o quitar variantes según los colores que tengas disponibles.
+    variantes: [
+      {
+        nombre: 'Multicolor',
+        color: '#C8608A',
+        // 📷 Fotos de la variante "Multicolor":
+        images: [
+          'img/cartucheras/multicolor-1.jpg',  // vista frontal
+          'img/cartucheras/multicolor-2.jpg',  // vista abierta
+          'img/cartucheras/multicolor-3.jpg',  // detalle cierre
+        ]
+      },
+      {
+        nombre: 'Azul',
+        color: '#4A7FB5',
+        images: [
+          'img/cartucheras/azul-1.jpg',
+          'img/cartucheras/azul-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Verde',
+        color: '#5E9E6B',
+        images: [
+          'img/cartucheras/verde-1.jpg',
+          'img/cartucheras/verde-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Natural',
+        color: '#C8A96E',
+        images: [
+          'img/cartucheras/natural-1.jpg',
+          'img/cartucheras/natural-2.jpg',
+        ]
+      },
+    ]
   },
+
+  // ─────────────────────────────────────────────
+  //  BOLSITOS DE TERMOS Y MATES
+  // ─────────────────────────────────────────────
   {
     id: 'bolsito-termo-001',
     nombre: 'Bolsito para Termo',
     descripcion: 'Porta-termo artesanal con asa reforzada. Compatible con termos estándar. Diseños únicos hechos en Gualeguay.',
     emoji: '🧴',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos-termos/bolsito-termo.jpg
-    imagen: 'img/bolsitos-termos/bolsito-termo.jpg',
     categoria: 'bolsitos-termos',
     precioMayorista: 4200,
     precioMinorista: 6900,
     minMayorista: 6,
     badge: 'Popular',
-    destacado: true
+    destacado: true,
+    variantes: [
+      {
+        nombre: 'Terracota',
+        color: '#C1440E',
+        images: [
+          'img/bolsitos-termos/termo-terracota-1.jpg',
+          'img/bolsitos-termos/termo-terracota-2.jpg',
+          'img/bolsitos-termos/termo-terracota-3.jpg',
+        ]
+      },
+      {
+        nombre: 'Azul',
+        color: '#2C5F8A',
+        images: [
+          'img/bolsitos-termos/termo-azul-1.jpg',
+          'img/bolsitos-termos/termo-azul-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Rosa',
+        color: '#D4789A',
+        images: [
+          'img/bolsitos-termos/termo-rosa-1.jpg',
+          'img/bolsitos-termos/termo-rosa-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Natural',
+        color: '#C8A96E',
+        images: [
+          'img/bolsitos-termos/termo-natural-1.jpg',
+          'img/bolsitos-termos/termo-natural-2.jpg',
+        ]
+      },
+    ]
   },
   {
     id: 'bolsito-mate-001',
     nombre: 'Bolsito para Mate',
     descripcion: 'Porta-mate artesanal diseñado para proteger tu mate. Incluye bolsillo interior. Múltiples diseños disponibles.',
     emoji: '🫖',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos-termos/bolsito-mate.jpg
-    imagen: 'img/bolsitos-termos/bolsito-mate.jpg',
     categoria: 'bolsitos-termos',
     precioMayorista: 3800,
     precioMinorista: 6200,
     minMayorista: 6,
     badge: null,
-    destacado: false
+    destacado: false,
+    variantes: [
+      {
+        nombre: 'Rosa',
+        color: '#D4789A',
+        images: [
+          'img/bolsitos-termos/mate-rosa-1.jpg',
+          'img/bolsitos-termos/mate-rosa-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Verde',
+        color: '#5E9E6B',
+        images: [
+          'img/bolsitos-termos/mate-verde-1.jpg',
+          'img/bolsitos-termos/mate-verde-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Marrón',
+        color: '#8B5E3C',
+        images: [
+          'img/bolsitos-termos/mate-marron-1.jpg',
+          'img/bolsitos-termos/mate-marron-2.jpg',
+        ]
+      },
+    ]
   },
+
+  // ─────────────────────────────────────────────
+  //  MATES  (galería de ángulos, sin selector de color)
+  // ─────────────────────────────────────────────
   {
     id: 'mate-calabaza-001',
     nombre: 'Mate Calabaza Natural',
     descripcion: 'Mate de calabaza curado artesanalmente. Listo para usar. Cada pieza es única, cultivada y trabajada en Gualeguay, Entre Ríos.',
     emoji: '🥢',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/mates/mate-calabaza.jpg
-    imagen: 'img/mates/mate-calabaza.jpg',
     categoria: 'mates',
     precioMayorista: 5500,
     precioMinorista: 9000,
     minMayorista: 4,
     badge: 'Nuevo',
-    destacado: true
+    destacado: true,
+    // Sin variantes de color — solo galería de ángulos
+    // 📷 Agregá las fotos en estas rutas:
+    images: [
+      'img/mates/calabaza-1.jpg',   // vista frontal
+      'img/mates/calabaza-2.jpg',   // vista superior (boca)
+      'img/mates/calabaza-3.jpg',   // vista lateral
+      'img/mates/calabaza-4.jpg',   // detalle base
+    ]
   },
   {
     id: 'mate-torneado-001',
     nombre: 'Mate Torneado en Madera',
     descripcion: 'Mate artesanal torneado en madera nativa. Terminación impecable, curado con aceite natural. Pieza de colección.',
     emoji: '🪵',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/mates/mate-torneado-madera.jpg
-    imagen: 'img/mates/mate-torneado-madera.jpg',
     categoria: 'mates',
     precioMayorista: 7200,
     precioMinorista: 12000,
     minMayorista: 4,
     badge: 'Premium',
-    destacado: true
+    destacado: true,
+    images: [
+      'img/mates/torneado-1.jpg',   // vista frontal
+      'img/mates/torneado-2.jpg',   // vista superior
+      'img/mates/torneado-3.jpg',   // detalle textura madera
+    ]
   },
+
+  // ─────────────────────────────────────────────
+  //  BOMBILLAS  (galería de ángulos, sin selector de color)
+  // ─────────────────────────────────────────────
   {
     id: 'bombilla-acero-001',
     nombre: 'Bombilla de Acero Inox.',
     descripcion: 'Bombilla de acero inoxidable 316L, filtro tipo pala ancha. Higiénica y duradera. Ideal para todo tipo de mate.',
     emoji: '🥄',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bombillas/bombilla-acero-inox.jpg
-    imagen: 'img/bombillas/bombilla-acero-inox.jpg',
     categoria: 'bombillas',
     precioMayorista: 2200,
     precioMinorista: 3800,
     minMayorista: 12,
     badge: null,
-    destacado: false
+    destacado: false,
+    images: [
+      'img/bombillas/acero-1.jpg',   // vista completa
+      'img/bombillas/acero-2.jpg',   // detalle filtro
+      'img/bombillas/acero-3.jpg',   // en uso con mate
+    ]
   },
   {
     id: 'bombilla-alpaca-001',
     nombre: 'Bombilla de Alpaca',
     descripcion: 'Bombilla de alpaca con filtro espiral. Tradicional y elegante. Terminación artesanal pulida a mano.',
     emoji: '✨',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bombillas/bombilla-alpaca.jpg
-    imagen: 'img/bombillas/bombilla-alpaca.jpg',
     categoria: 'bombillas',
     precioMayorista: 3000,
     precioMinorista: 5000,
     minMayorista: 12,
     badge: 'Nuevo',
-    destacado: false
+    destacado: false,
+    images: [
+      'img/bombillas/alpaca-1.jpg',  // vista completa
+      'img/bombillas/alpaca-2.jpg',  // detalle espiral
+    ]
   },
+
+  // ─────────────────────────────────────────────
+  //  BOLSITOS
+  // ─────────────────────────────────────────────
   {
     id: 'bolsito-multiusos-001',
     nombre: 'Bolsito Multiusos',
     descripcion: 'Bolsito versátil con asa y cierre. Perfecto para cosméticos, accesorios o como mini cartera. Confección artesanal.',
     emoji: '👜',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos/bolsito-multiusos.jpg
-    imagen: 'img/bolsitos/bolsito-multiusos.jpg',
     categoria: 'bolsitos',
     precioMayorista: 3200,
     precioMinorista: 5300,
     minMayorista: 6,
     badge: null,
-    destacado: false
+    destacado: false,
+    variantes: [
+      {
+        nombre: 'Rosa',
+        color: '#D4789A',
+        images: [
+          'img/bolsitos/multiusos-rosa-1.jpg',
+          'img/bolsitos/multiusos-rosa-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Azul',
+        color: '#4A7FB5',
+        images: [
+          'img/bolsitos/multiusos-azul-1.jpg',
+          'img/bolsitos/multiusos-azul-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Blanco',
+        color: '#E8E0D5',
+        images: [
+          'img/bolsitos/multiusos-blanco-1.jpg',
+          'img/bolsitos/multiusos-blanco-2.jpg',
+        ]
+      },
+    ]
   },
   {
     id: 'bolsito-grande-001',
     nombre: 'Bolsito Grande Artesanal',
     descripcion: 'Bolsito amplio con correa ajustable. Ideal como cartera o bolso de mano. Diseños únicos en telas seleccionadas.',
     emoji: '🛍️',
-    // 📷 REEMPLAZAR IMAGEN: copiar foto en img/bolsitos/bolsito-grande.jpg
-    imagen: 'img/bolsitos/bolsito-grande.jpg',
     categoria: 'bolsitos',
     precioMayorista: 4500,
     precioMinorista: 7500,
     minMayorista: 6,
     badge: 'Popular',
-    destacado: true
+    destacado: true,
+    variantes: [
+      {
+        nombre: 'Multicolor',
+        color: '#C8608A',
+        images: [
+          'img/bolsitos/grande-multicolor-1.jpg',
+          'img/bolsitos/grande-multicolor-2.jpg',
+          'img/bolsitos/grande-multicolor-3.jpg',
+        ]
+      },
+      {
+        nombre: 'Natural',
+        color: '#C8A96E',
+        images: [
+          'img/bolsitos/grande-natural-1.jpg',
+          'img/bolsitos/grande-natural-2.jpg',
+        ]
+      },
+      {
+        nombre: 'Verde',
+        color: '#5E9E6B',
+        images: [
+          'img/bolsitos/grande-verde-1.jpg',
+          'img/bolsitos/grande-verde-2.jpg',
+        ]
+      },
+    ]
   }
 ];
 
-// ===== RENDER DE PRODUCTOS =====
-const renderProductos = (filtro = 'todos', contenedorId = 'productos-grid') => {
-  const contenedor = document.getElementById(contenedorId);
-  if (!contenedor) return;
 
-  const filtrados = filtro === 'todos'
-    ? PRODUCTOS
-    : PRODUCTOS.filter(p => p.categoria === filtro);
+// ════════════════════════════════════════════════════════
+//  FUNCIONES GLOBALES DE GALERÍA
+//  (llamadas desde atributos onclick en el HTML dinámico)
+// ════════════════════════════════════════════════════════
 
-  contenedor.innerHTML = filtrados.map((p, i) => `
-    <div class="producto-card fade-in-up" style="animation-delay:${(i % 4) * 0.1}s">
-      ${p.badge ? `<div class="producto-badge ${p.badge === 'Nuevo' ? 'nuevo' : ''}">${p.badge}</div>` : ''}
-      <div class="producto-imagen">
-        <!-- 📷 Imagen del producto: ${p.imagen} -->
-        <img
-          src="${p.imagen}"
-          alt="${p.nombre}"
-          class="producto-img-real"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
-        <div class="producto-icon" style="display:none">${p.emoji}</div>
+/**
+ * Cambia la imagen principal de un producto.
+ * @param {string} pid   - id del producto
+ * @param {string} src   - ruta de la nueva imagen
+ * @param {HTMLElement|null} thumbEl - botón miniatura clickeado (para marcar activo)
+ */
+function cambiarImagen(pid, src, thumbEl) {
+  const imgPrincipal = document.getElementById('img-main-' + pid);
+  const emojiEl      = document.getElementById('emoji-' + pid);
+
+  if (imgPrincipal) {
+    imgPrincipal.src = src;
+    imgPrincipal.style.display = '';
+    if (emojiEl) emojiEl.style.display = 'none';
+  }
+
+  if (thumbEl) {
+    const miniaturas = document.getElementById('miniaturas-' + pid);
+    if (miniaturas) {
+      miniaturas.querySelectorAll('.miniatura').forEach(t => t.classList.remove('activa'));
+      thumbEl.classList.add('activa');
+    }
+  }
+}
+
+/**
+ * Selecciona una variante de color y actualiza galería + miniaturas.
+ * @param {string} pid   - id del producto
+ * @param {number} idx   - índice de la variante en producto.variantes
+ * @param {HTMLElement} btn - botón de variante clickeado
+ */
+function seleccionarVariante(pid, idx, btn) {
+  const producto = PRODUCTOS.find(p => p.id === pid);
+  if (!producto || !producto.variantes) return;
+  const variante = producto.variantes[idx];
+  if (!variante) return;
+
+  // Cambiar imagen principal a la primera foto de la variante
+  if (variante.images && variante.images.length > 0) {
+    cambiarImagen(pid, variante.images[0], null);
+  }
+
+  // Regenerar miniaturas con las fotos de la variante
+  const miniaturas = document.getElementById('miniaturas-' + pid);
+  if (miniaturas && variante.images && variante.images.length > 1) {
+    miniaturas.innerHTML = variante.images.map((src, i) => `
+      <button class="miniatura${i === 0 ? ' activa' : ''}"
+              onclick="cambiarImagen('${pid}', '${src}', this)"
+              title="Foto ${i + 1}">
+        <img src="${src}" alt="${producto.nombre} – foto ${i + 1}"
+             onerror="this.parentElement.style.display='none'">
+      </button>
+    `).join('');
+  } else if (miniaturas) {
+    miniaturas.innerHTML = '';
+  }
+
+  // Marcar variante activa
+  const card = btn.closest('.producto-card');
+  if (card) {
+    card.querySelectorAll('.variante-btn').forEach(b => b.classList.remove('activa'));
+    btn.classList.add('activa');
+    const nombreEl = document.getElementById('variante-nombre-' + pid);
+    if (nombreEl) nombreEl.textContent = variante.nombre;
+  }
+}
+
+
+// ════════════════════════════════════════════════════════
+//  RENDER
+// ════════════════════════════════════════════════════════
+
+/**
+ * Construye el HTML de una tarjeta de producto.
+ * Soporta: variantes de color + galería, solo galería, o solo emoji.
+ */
+const renderCard = (p, delay = 0) => {
+  const tieneVariantes = p.variantes && p.variantes.length > 0;
+  const primeraVariante = tieneVariantes ? p.variantes[0] : null;
+
+  // Imágenes a mostrar inicialmente
+  const imagenesActuales = tieneVariantes
+    ? primeraVariante.images
+    : (p.images || []);
+
+  const imgPrincipal = imagenesActuales[0] || '';
+  const masImagenes   = imagenesActuales.slice(1);
+
+  // ── Galería principal ──
+  const galeriaHTML = `
+    <div class="galeria-principal">
+      <img
+        id="img-main-${p.id}"
+        src="${imgPrincipal}"
+        alt="${p.nombre}"
+        class="img-principal"
+        onerror="this.style.display='none';document.getElementById('emoji-${p.id}').style.display='flex'"
+        ${!imgPrincipal ? 'style="display:none"' : ''}
+      />
+      <div class="producto-icon" id="emoji-${p.id}" style="display:${imgPrincipal ? 'none' : 'flex'}">${p.emoji}</div>
+    </div>
+  `;
+
+  // ── Miniaturas ──
+  const miniaturas = imagenesActuales.length > 1 ? `
+    <div class="galeria-miniaturas" id="miniaturas-${p.id}">
+      <button class="miniatura activa"
+              onclick="cambiarImagen('${p.id}', '${imagenesActuales[0]}', this)"
+              title="Foto 1">
+        <img src="${imagenesActuales[0]}" alt="foto 1"
+             onerror="this.parentElement.style.display='none'">
+      </button>
+      ${masImagenes.map((src, i) => `
+        <button class="miniatura"
+                onclick="cambiarImagen('${p.id}', '${src}', this)"
+                title="Foto ${i + 2}">
+          <img src="${src}" alt="foto ${i + 2}"
+               onerror="this.parentElement.style.display='none'">
+        </button>
+      `).join('')}
+    </div>
+  ` : `<div class="galeria-miniaturas" id="miniaturas-${p.id}"></div>`;
+
+  // ── Selector de variantes ──
+  const variantesHTML = tieneVariantes ? `
+    <div class="variantes-container">
+      <div class="variantes-header">
+        <span class="variante-label">Color:</span>
+        <span class="variante-nombre-actual" id="variante-nombre-${p.id}">${primeraVariante.nombre}</span>
       </div>
+      <div class="variantes-botones">
+        ${p.variantes.map((v, i) => `
+          <button class="variante-btn${i === 0 ? ' activa' : ''}"
+                  style="background:${v.color}"
+                  onclick="seleccionarVariante('${p.id}', ${i}, this)"
+                  title="${v.nombre}"
+                  aria-label="Color ${v.nombre}">
+          </button>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  return `
+    <div class="producto-card fade-in-up" data-id="${p.id}" style="animation-delay:${delay}s">
+      ${p.badge ? `<div class="producto-badge${p.badge === 'Nuevo' ? ' nuevo' : ''}">${p.badge}</div>` : ''}
+
+      <div class="producto-galeria">
+        ${galeriaHTML}
+        ${miniaturas}
+      </div>
+
       <div class="producto-info">
         <div class="producto-nombre">${p.nombre}</div>
+        ${variantesHTML}
         <div class="producto-descripcion">${p.descripcion}</div>
         <div class="precios-container">
           <div class="precio-row">
@@ -176,20 +494,49 @@ const renderProductos = (filtro = 'todos', contenedorId = 'productos-grid') => {
           <div class="precio-minimo">Mayorista: mínimo ${p.minMayorista} unidades</div>
         </div>
         <div class="producto-acciones">
-          <button class="btn-agregar" onclick='Carrito.agregar(${JSON.stringify(p).replace(/'/g, "\\'")}, "minorista")'>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <button class="btn-agregar"
+                  onclick="Carrito.agregar(PRODUCTOS.find(p=>p.id==='${p.id}'), 'minorista')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
             Agregar
           </button>
-          <button class="btn-mayorista-producto" onclick='Carrito.agregar(${JSON.stringify(p).replace(/'/g, "\\'")}, "mayorista")'>
+          <button class="btn-mayorista-producto"
+                  onclick="Carrito.agregar(PRODUCTOS.find(p=>p.id==='${p.id}'), 'mayorista')">
             🏷️ Mayor.
           </button>
         </div>
       </div>
     </div>
-  `).join('');
+  `;
 };
 
-// ===== FILTROS =====
+/**
+ * Renderiza productos en un contenedor, con filtro opcional por categoría.
+ */
+const renderProductos = (filtro = 'todos', contenedorId = 'productos-grid') => {
+  const contenedor = document.getElementById(contenedorId);
+  if (!contenedor) return;
+
+  const lista = filtro === 'todos'
+    ? PRODUCTOS
+    : PRODUCTOS.filter(p => p.categoria === filtro);
+
+  contenedor.innerHTML = lista.map((p, i) => renderCard(p, (i % 4) * 0.1)).join('');
+};
+
+/**
+ * Alias para catalogo.html — renderiza una categoría en su grid específico.
+ */
+const renderCategoria = (filtro, gridId) => renderProductos(filtro, gridId);
+
+
+// ════════════════════════════════════════════════════════
+//  FILTROS
+// ════════════════════════════════════════════════════════
+
 const initFiltros = () => {
   document.querySelectorAll('.filtro-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -200,18 +547,22 @@ const initFiltros = () => {
   });
 };
 
-// ===== FORMULARIO CONTACTO =====
+
+// ════════════════════════════════════════════════════════
+//  FORMULARIO CONTACTO
+// ════════════════════════════════════════════════════════
+
 const initFormContacto = () => {
   const form = document.getElementById('form-contacto');
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const nombre = form.querySelector('#nombre').value;
+    const nombre  = form.querySelector('#nombre').value;
     const telefono = form.querySelector('#telefono').value;
-    const asunto = form.querySelector('#asunto').value;
+    const asunto  = form.querySelector('#asunto').value;
     const mensaje = form.querySelector('#mensaje').value;
-    const tipo = form.querySelector('#tipo').value;
+    const tipo    = form.querySelector('#tipo').value;
 
     const texto = `¡Hola MORATA! Soy *${nombre}* 👋%0A%0A*Tipo:* ${tipo}%0A*Asunto:* ${asunto}%0A*Teléfono:* ${telefono}%0A%0A${mensaje}`;
     // Número principal para consultas: +54 9 3444 40-8459
@@ -222,7 +573,11 @@ const initFormContacto = () => {
   });
 };
 
-// ===== INIT =====
+
+// ════════════════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════════════════
+
 document.addEventListener('DOMContentLoaded', () => {
   renderProductos('todos');
   initFiltros();
