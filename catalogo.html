@@ -6,7 +6,7 @@
   <meta name="description" content="Catálogo MORATA - Todos nuestros productos artesanales: cartucheras, bolsitos, mates y bombillas. Precios mayoristas y minoristas." />
   <title>Catálogo | MORATA Artesanías</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧉</text></svg>" />
+  <link rel="icon" href="img/logo-morata.png" />
 </head>
 <body>
 
@@ -14,24 +14,7 @@
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="index.html" class="logo-wrapper">
-      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="50" cy="68" rx="28" ry="24" fill="#C1440E"/>
-        <ellipse cx="50" cy="68" rx="28" ry="24" fill="url(#mateGrad2)"/>
-        <rect x="38" y="42" width="24" height="8" rx="3" fill="#9A3509"/>
-        <rect x="52" y="22" width="4" height="30" rx="2" fill="#8B5E3C"/>
-        <ellipse cx="54" cy="20" rx="5" ry="3" fill="#8B5E3C"/>
-        <text x="50" y="78" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#F5F0E8">M</text>
-        <defs>
-          <radialGradient id="mateGrad2" cx="35%" cy="35%">
-            <stop offset="0%" stop-color="#E8622A" stop-opacity="0.6"/>
-            <stop offset="100%" stop-color="#9A3509" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-      </svg>
-      <div class="logo-texto">
-        <span class="logo-nombre">MORATA</span>
-        <span class="logo-slogan">Artesanías del litoral</span>
-      </div>
+      <img src="img/logo-morata.png" alt="Morata" class="logo">
     </a>
 
     <ul class="nav-links" id="nav-links">
@@ -67,15 +50,15 @@
 </section>
 
 <!-- ===== INFO PRECIOS ===== -->
-<section style="background:var(--crema); padding:40px 20px;">
+<section style="background:var(--color-bg-secondary); padding:40px 20px;">
   <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:24px;">
-    <div style="background:white; border-radius:16px; padding:24px; border-left:4px solid var(--terracota); box-shadow:0 4px 20px var(--sombra);">
+    <div style="background:white; border-radius:16px; padding:24px; border-left:4px solid var(--color-primary); box-shadow:0 4px 20px var(--color-shadow);">
       <div style="font-size:1.4rem; margin-bottom:8px;">🏷️ Precio Mayorista</div>
-      <p style="color:var(--texto-claro); font-size:0.9rem; line-height:1.6;">Para revendedores, locales y emprendedores. Se requiere compra mínima por producto (varía según artículo). Consultá por descuentos por volumen mayor.</p>
+      <p style="color:var(--color-text-muted); font-size:0.9rem; line-height:1.6;">Para revendedores, locales y emprendedores. Se requiere compra mínima por producto (varía según artículo). Consultá por descuentos por volumen mayor.</p>
     </div>
-    <div style="background:white; border-radius:16px; padding:24px; border-left:4px solid var(--marron); box-shadow:0 4px 20px var(--sombra);">
+    <div style="background:white; border-radius:16px; padding:24px; border-left:4px solid var(--color-primary-dark); box-shadow:0 4px 20px var(--color-shadow);">
       <div style="font-size:1.4rem; margin-bottom:8px;">🛍️ Precio Minorista</div>
-      <p style="color:var(--texto-claro); font-size:0.9rem; line-height:1.6;">Para consumidores finales. Podés comprar desde 1 unidad. Envíos a todo el país por correo, transporte o encomienda.</p>
+      <p style="color:var(--color-text-muted); font-size:0.9rem; line-height:1.6;">Para consumidores finales. Podés comprar desde 1 unidad. Envíos a todo el país por correo, transporte o encomienda.</p>
     </div>
   </div>
 </section>
@@ -89,10 +72,10 @@
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <div style="font-size:2rem;">🎒</div>
         <div>
-          <h2 style="color:var(--marron); font-size:1.8rem;">Cartucheras</h2>
-          <p style="color:var(--texto-claro);">Confeccionadas a mano con telas seleccionadas</p>
+          <h2 style="color:var(--color-primary-dark); font-size:1.8rem;">Cartucheras</h2>
+          <p style="color:var(--color-text-muted);">Confeccionadas a mano con telas seleccionadas</p>
         </div>
-        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--terracota), transparent);"></div>
+        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--color-primary), transparent);"></div>
       </div>
       <div class="productos-grid" id="grid-cartucheras"></div>
     </div>
@@ -102,10 +85,10 @@
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <div style="font-size:2rem;">🧴</div>
         <div>
-          <h2 style="color:var(--marron); font-size:1.8rem;">Bolsitos de Termos y Mates</h2>
-          <p style="color:var(--texto-claro);">Porta-termos y porta-mates artesanales</p>
+          <h2 style="color:var(--color-primary-dark); font-size:1.8rem;">Bolsitos de Termos y Mates</h2>
+          <p style="color:var(--color-text-muted);">Porta-termos y porta-mates artesanales</p>
         </div>
-        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--terracota), transparent);"></div>
+        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--color-primary), transparent);"></div>
       </div>
       <div class="productos-grid" id="grid-termos"></div>
     </div>
@@ -115,10 +98,10 @@
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <div style="font-size:2rem;">🥢</div>
         <div>
-          <h2 style="color:var(--marron); font-size:1.8rem;">Mates</h2>
-          <p style="color:var(--texto-claro);">Mates naturales y artesanales curados listos para usar</p>
+          <h2 style="color:var(--color-primary-dark); font-size:1.8rem;">Mates</h2>
+          <p style="color:var(--color-text-muted);">Mates naturales y artesanales curados listos para usar</p>
         </div>
-        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--terracota), transparent);"></div>
+        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--color-primary), transparent);"></div>
       </div>
       <div class="productos-grid" id="grid-mates"></div>
     </div>
@@ -128,10 +111,10 @@
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <div style="font-size:2rem;">🥄</div>
         <div>
-          <h2 style="color:var(--marron); font-size:1.8rem;">Bombillas</h2>
-          <p style="color:var(--texto-claro);">De acero inoxidable y alpaca, para todo tipo de mate</p>
+          <h2 style="color:var(--color-primary-dark); font-size:1.8rem;">Bombillas</h2>
+          <p style="color:var(--color-text-muted);">De acero inoxidable y alpaca, para todo tipo de mate</p>
         </div>
-        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--terracota), transparent);"></div>
+        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--color-primary), transparent);"></div>
       </div>
       <div class="productos-grid" id="grid-bombillas"></div>
     </div>
@@ -141,10 +124,10 @@
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <div style="font-size:2rem;">👜</div>
         <div>
-          <h2 style="color:var(--marron); font-size:1.8rem;">Bolsitos</h2>
-          <p style="color:var(--texto-claro);">Bolsitos multiusos confeccionados artesanalmente</p>
+          <h2 style="color:var(--color-primary-dark); font-size:1.8rem;">Bolsitos</h2>
+          <p style="color:var(--color-text-muted);">Bolsitos multiusos confeccionados artesanalmente</p>
         </div>
-        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--terracota), transparent);"></div>
+        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--color-primary), transparent);"></div>
       </div>
       <div class="productos-grid" id="grid-bolsitos"></div>
     </div>
@@ -154,10 +137,10 @@
       <div style="display:flex; align-items:center; gap:16px; margin-bottom:32px;">
         <div style="font-size:2rem;">🌿</div>
         <div>
-          <h2 style="color:var(--marron); font-size:1.8rem;">Yerberos</h2>
-          <p style="color:var(--texto-claro);">Yerberos artesanales, prácticos y con identidad propia</p>
+          <h2 style="color:var(--color-primary-dark); font-size:1.8rem;">Yerberos</h2>
+          <p style="color:var(--color-text-muted);">Yerberos artesanales, prácticos y con identidad propia</p>
         </div>
-        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--terracota), transparent);"></div>
+        <div style="height:2px; flex:1; background:linear-gradient(to right, var(--color-primary), transparent);"></div>
       </div>
       <div class="productos-grid" id="grid-yerberos"></div>
     </div>
@@ -187,17 +170,7 @@
   <div class="footer-grid">
     <div>
       <div class="logo-wrapper footer-logo-texto">
-        <svg width="44" height="44" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="50" cy="68" rx="28" ry="24" fill="#C1440E"/>
-          <rect x="38" y="42" width="24" height="8" rx="3" fill="#9A3509"/>
-          <rect x="52" y="22" width="4" height="30" rx="2" fill="#8B5E3C"/>
-          <ellipse cx="54" cy="20" rx="5" ry="3" fill="#8B5E3C"/>
-          <text x="50" y="78" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#F5F0E8">M</text>
-        </svg>
-        <div class="logo-texto">
-          <span class="logo-nombre">MORATA</span>
-          <span class="logo-slogan">Artesanías del litoral</span>
-        </div>
+        <img src="img/logo-morata.png" alt="Morata" class="logo footer-logo">
       </div>
       <p class="footer-desc">Emprendimiento artesanal de Entre Ríos. Elaboramos cartucheras, bolsitos, mates y bombillas con materiales de calidad.</p>
     </div>
