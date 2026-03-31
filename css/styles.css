@@ -1933,14 +1933,19 @@ img {
     flex-direction: column-reverse;
   }
 
-  .hero-visual {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 12px;
+  .hero-circulo {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 16px auto;
   }
 
   .hero-logo-img {
-    max-width: 110px;
+    max-width: 120px !important;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 40px 20px;
   }
 
   .nav-links {
