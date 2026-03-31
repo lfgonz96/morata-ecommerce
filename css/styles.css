@@ -1929,6 +1929,20 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+  }
+
+  .hero-visual {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 8px;
+  }
+
+  .hero-logo-img {
+    max-width: 140px;
+  }
+
   .nav-links {
     position: fixed;
     top: 70px;
