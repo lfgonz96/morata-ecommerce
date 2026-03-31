@@ -142,9 +142,10 @@ img {
 }
 
 .logo {
-  max-height: 60px;
+  height: 50px;
   width: auto;
-  display: block;
+  max-width: 160px;
+  object-fit: contain;
 }
 
 .footer-logo {
@@ -154,10 +155,11 @@ img {
 
 .hero-logo-img {
   width: 100%;
-  max-width: 340px;
+  max-width: 280px;
+  height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 8px 24px rgba(91, 61, 122, 0.15));
   mix-blend-mode: multiply;
+  filter: drop-shadow(0 8px 24px rgba(91, 61, 122, 0.15));
 }
 
 .logo-wrapper {
