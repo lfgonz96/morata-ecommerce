@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="bg-surface py-20 px-6 md:px-12 mt-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-1">
-          <Link to="/" className="text-3xl font-serif italic font-bold text-primary mb-6 block">
-            MORATA
+          <Link to="/" className="mb-6 block">
+            <img src="/logo-morata.png" alt="Morata" className="h-8 w-auto" />
           </Link>
           <p className="text-primary/60 text-sm leading-relaxed max-w-xs">
             Excelencia artesanal desde Gualeguay, transmitiendo la esencia de nuestra tierra en cada costura.
