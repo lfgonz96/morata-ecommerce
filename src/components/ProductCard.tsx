@@ -51,14 +51,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ producto, delay = 0 }) => {
         {imagenes.length > 1 && (
           <>
             <button
-              onClick={prev}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); prev(); }}
               className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-1.5 shadow transition-opacity md:opacity-0 md:group-hover:opacity-100"
               aria-label="Foto anterior"
             >
               <ChevronLeft className="w-4 h-4 text-primary" />
             </button>
             <button
-              onClick={next}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); next(); }}
               className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-1.5 shadow transition-opacity md:opacity-0 md:group-hover:opacity-100"
               aria-label="Foto siguiente"
             >
@@ -68,7 +68,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ producto, delay = 0 }) => {
               {imagenes.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setImgIdx(i)}
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); setImgIdx(i); }}
                   aria-label={`Ver foto ${i + 1}`}
                   className={`w-1.5 h-1.5 rounded-full transition-all ${
                     i === imgIdx ? 'bg-white scale-125' : 'bg-white/50'
