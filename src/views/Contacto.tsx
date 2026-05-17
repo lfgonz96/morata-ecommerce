@@ -89,7 +89,7 @@ export default function Contacto() {
                       rel="noopener noreferrer"
                       className="text-primary/60 font-light mt-1 hover:text-secondary transition-colors underline decoration-primary/20 underline-offset-4 block"
                     >
-                      +54 9 3444 XXXXXX
+                      +54 9 11 5591-2159
                     </a>
                   </div>
                 </div>
