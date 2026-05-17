@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './views/Home';
 import Catalogo from './views/Catalogo';
 import Contacto from './views/Contacto';
+import ProductoDetalle from './views/ProductoDetalle';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import CarritoModal from './components/CarritoModal';
 import { CarritoProvider } from './context/CarritoContext';
@@ -30,6 +31,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/catalogo" element={<Catalogo />} />
               <Route path="/contacto" element={<Contacto />} />
+              <Route path="/producto/:id" element={<ProductoDetalle />} />
             </Routes>
           </main>
           <Footer />

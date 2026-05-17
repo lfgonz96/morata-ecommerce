@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ShoppingCart, ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import type { Producto } from '../data/productos';
@@ -78,7 +79,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ producto, delay = 0 }) => {
         )}
       </div>
 
-      <h4 className="text-xl font-serif text-primary mb-1">{nombre}</h4>
+      <Link to={`/producto/${producto.id}`} className="block hover:opacity-80 transition-opacity">
+        <h4 className="text-xl font-serif text-primary mb-1">{nombre}</h4>
+      </Link>
       <p className="text-secondary font-bold tracking-tight mb-4">{precioTexto}</p>
       <button
         onClick={handleAgregar}
