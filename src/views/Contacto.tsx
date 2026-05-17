@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'motion/react';
 import { MapPin, Clock, Instagram, Send, CreditCard, Wallet, Landmark } from 'lucide-react';
 
 const WA_NUMBER = '5491155912159';
@@ -30,21 +29,12 @@ export default function Contacto() {
           />
         </div>
         <div className="relative z-20 text-center px-6 max-w-3xl">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-5xl md:text-7xl text-white font-bold tracking-tighter mb-6"
-          >
+          <h1 className="font-serif text-5xl md:text-7xl text-white font-bold tracking-tighter mb-6">
             Estamos para ayudarte
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-white/90 text-lg md:text-xl font-light leading-relaxed"
-          >
+          </h1>
+          <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed">
             Desde el corazón de Gualeguay, cada pieza cuenta una historia. Queremos ser parte de la tuya.
-          </motion.p>
+          </p>
         </div>
       </section>
 

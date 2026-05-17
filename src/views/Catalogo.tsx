@@ -62,21 +62,12 @@ export default function Catalogo() {
           />
         </div>
         <div className="relative z-10 text-center px-6">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-8xl font-serif tracking-tighter text-primary mb-4 italic"
-          >
+          <h1 className="text-6xl md:text-8xl font-serif tracking-tighter text-primary mb-4 italic">
             Catálogo MORATA
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-secondary font-sans text-lg tracking-widest uppercase font-semibold"
-          >
+          </h1>
+          <p className="text-secondary font-sans text-lg tracking-widest uppercase font-semibold">
             Artesanía de Entre Ríos
-          </motion.p>
+          </p>
           <div className="mt-12 w-px h-24 bg-primary/20 mx-auto"></div>
         </div>
       </header>
