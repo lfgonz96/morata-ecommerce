@@ -26,7 +26,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-md shadow-sm py-4' : 'bg-background py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link to="/">
-          <img src="/logo-morata.png" alt="Morata" className="h-10 w-auto" />
+          <img src="/logo-morata.png" alt="Morata" className="h-16 w-auto" style={{ mixBlendMode: 'multiply' }} />
         </Link>
 
         {/* Desktop Menu */}
