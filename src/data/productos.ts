@@ -13,7 +13,7 @@ export interface Producto {
 export const productos: Producto[] = [
   {
     id: 'kit-matero-premium-verde',
-    nombre: 'Kit Matero Premium Reforzado',
+    nombre: 'Kit Matero Premium Verde',
     precio: 35000,
     precioTexto: '$35.000',
     descripcion: 'El Kit incluye una azucarera y un portamate, elementos esenciales que complementan la experiencia de compartir un buen momento. Su diseño práctico y funcional lo convierte en el compañero perfecto para picnics, reuniones o simplemente disfrutar en casa.',
@@ -28,7 +28,7 @@ export const productos: Producto[] = [
   },
   {
     id: 'kit-matero-premium-azul',
-    nombre: 'Kit Matero Premium Reforzado',
+    nombre: 'Kit Matero Premium Azul',
     precio: 35000,
     precioTexto: '$35.000',
     descripcion: 'El Kit incluye una azucarera y un portamate, elementos esenciales que complementan la experiencia de compartir un buen momento. Su diseño práctico y funcional lo convierte en el compañero perfecto para picnics, reuniones o simplemente disfrutar en casa.',
