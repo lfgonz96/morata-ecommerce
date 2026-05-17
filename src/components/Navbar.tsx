@@ -2,11 +2,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShoppingBag, Menu, X, Instagram } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useCarrito } from '../context/CarritoContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { cantidadTotal, abrirModal } = useCarrito();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -54,9 +56,17 @@ export default function Navbar() {
           >
             <Instagram className="w-5 h-5" />
           </a>
-          <button className="relative hover:opacity-80 transition-opacity">
+          <button
+            onClick={abrirModal}
+            className="relative hover:opacity-80 transition-opacity"
+            aria-label="Abrir carrito"
+          >
             <ShoppingBag className="w-6 h-6 text-primary" />
-            <span className="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
+            {cantidadTotal > 0 && (
+              <span className="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                {cantidadTotal > 9 ? '9+' : cantidadTotal}
+              </span>
+            )}
           </button>
           
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
