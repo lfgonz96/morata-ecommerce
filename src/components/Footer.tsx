@@ -46,9 +46,15 @@ export default function Footer() {
             </button>
           </div>
           <div className="flex space-x-4 mt-8">
-            <Link to="#" className="text-primary/40 hover:text-secondary transition-colors">
+            <a
+              href="https://www.instagram.com/morata.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Morata"
+              className="text-primary/40 hover:text-secondary transition-colors"
+            >
               <Instagram className="w-5 h-5" />
-            </Link>
+            </a>
             <Link to="#" className="text-primary/40 hover:text-secondary transition-colors">
               <Facebook className="w-5 h-5" />
             </Link>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(head -40)",
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"d:\\\\Usuarios\\\\User\\\\Desktop\\\\MORATA-REACT\\\\.github\\\\workflows\")",
+      "Bash(./node_modules/.bin/tsc --noEmit)"
+    ]
+  }
+}

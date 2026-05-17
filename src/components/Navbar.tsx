@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X } from 'lucide-react';
+import { ShoppingBag, Menu, X, Instagram } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -45,6 +45,15 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center space-x-6">
+          <a
+            href="https://www.instagram.com/morata.ar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block text-primary/60 hover:text-secondary transition-colors"
+            aria-label="Instagram de Morata"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
           <button className="relative hover:opacity-80 transition-opacity">
             <ShoppingBag className="w-6 h-6 text-primary" />
             <span className="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
@@ -78,6 +87,16 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+              <a
+                href="https://www.instagram.com/morata.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary/60 hover:text-secondary transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <Instagram className="w-5 h-5" />
+                <span className="font-serif text-xl">Instagram</span>
+              </a>
             </div>
           </motion.div>
         )}

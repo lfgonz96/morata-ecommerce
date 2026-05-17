@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Home from './views/Home';
 import Catalogo from './views/Catalogo';
 import Contacto from './views/Contacto';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -34,6 +35,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingWhatsApp />
       </div>
     </Router>
   );
