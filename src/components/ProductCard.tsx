@@ -34,7 +34,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ producto, delay = 0 }) => {
       className="group"
     >
       {/* Carrusel */}
-      <div className="aspect-[4/5] bg-surface rounded-md overflow-hidden mb-6 relative">
+      <Link to={`/producto/${producto.id}`} className="block">
+      <div className="aspect-[4/5] bg-surface rounded-md overflow-hidden mb-6 relative cursor-pointer">
         <img
           src={imagenes[imgIdx]}
           alt={`${nombre} - foto ${imgIdx + 1}`}
@@ -78,10 +79,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ producto, delay = 0 }) => {
           </>
         )}
       </div>
-
-      <Link to={`/producto/${producto.id}`} className="block hover:opacity-80 transition-opacity">
-        <h4 className="text-xl font-serif text-primary mb-1">{nombre}</h4>
       </Link>
+
+      <h4 className="text-xl font-serif text-primary mb-1">{nombre}</h4>
       <p className="text-secondary font-bold tracking-tight mb-4">{precioTexto}</p>
       <button
         onClick={handleAgregar}
