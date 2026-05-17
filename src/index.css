@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --color-primary: #361528;
+  --color-primary-light: #4e2a3e;
+  --color-secondary: #974723;
+  --color-accent: #ecb8d1;
+  --color-background: #fcf9f4;
+  --color-surface: #f6f3ee;
+  --color-surface-dark: #ebe8e3;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-sans antialiased;
+  }
+}
+
+.glass-panel {
+  background: rgba(252, 249, 244, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, #4e2a3e 0%, #361528 100%);
+}
