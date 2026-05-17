@@ -113,7 +113,7 @@ export default function Catalogo() {
               href="https://wa.me/5491100000000"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondary-container hover:bg-secondary text-primary hover:text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 shadow-xl flex items-center gap-3 group"
+              className="bg-accent hover:bg-secondary text-primary hover:text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 shadow-xl flex items-center gap-3 group"
             >
               <MessageSquare className="w-6 h-6 group-hover:scale-110 transition-transform" />
               Consultar por WhatsApp
