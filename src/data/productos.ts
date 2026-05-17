@@ -40,4 +40,18 @@ export const productos: Producto[] = [
     colores: ['azul'],
     destacado: false,
   },
+  {
+    id: 'kit-matero-premium-negro',
+    nombre: 'Kit Matero Premium Negro',
+    precio: 50000,
+    precioTexto: '$50.000',
+    descripcion: 'El Kit incluye una azucarera y un portamate, elementos esenciales que complementan la experiencia de compartir un buen momento. Confeccionado en cuero genuino, combina resistencia y elegancia en cada detalle.',
+    categoria: 'bolsitos',
+    imagenes: [
+      '/productos/bolsitos/negro/frente.webp',
+      '/productos/bolsitos/negro/kit.webp',
+    ],
+    colores: ['negro'],
+    destacado: false,
+  },
 ];
