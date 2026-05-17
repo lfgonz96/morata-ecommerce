@@ -26,4 +26,18 @@ export const productos: Producto[] = [
     colores: ['verde'],
     destacado: true,
   },
+  {
+    id: 'kit-matero-premium-azul',
+    nombre: 'Kit Matero Premium Reforzado',
+    precio: 35000,
+    precioTexto: '$35.000',
+    descripcion: 'El Kit incluye una azucarera y un portamate, elementos esenciales que complementan la experiencia de compartir un buen momento. Su diseño práctico y funcional lo convierte en el compañero perfecto para picnics, reuniones o simplemente disfrutar en casa.',
+    categoria: 'bolsitos',
+    imagenes: [
+      '/productos/bolsitos/azul/frente.webp',
+      '/productos/bolsitos/azul/kit.webp',
+    ],
+    colores: ['azul'],
+    destacado: false,
+  },
 ];
