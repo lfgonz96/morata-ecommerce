@@ -3,7 +3,7 @@ import { X, Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 import { useCarrito } from '../context/CarritoContext';
 
 // Reemplazá con el número real de Lautaro (formato: 549 + código de área + número)
-const WA_NUMBER = '5493444XXXXXX';
+const WA_NUMBER = '5491155912159';
 
 function formatPrecio(n: number) {
   return '$' + n.toLocaleString('es-AR');
